@@ -1,0 +1,10 @@
+{
+	"copilot.chat.customSkills": [
+		{
+			"id": "ui-ux-pro-max",
+			"name": "UI/UX Pro Max",
+			"description": "Design intelligence for UI/UX with searchable databases (79 styles, 192 palettes, 74 fonts, 119 guidelines, 25 charts)",
+			"instructions": ".vscode-skills/ui-ux-pro-max/SKILL.md"
+		}
+	]
+}

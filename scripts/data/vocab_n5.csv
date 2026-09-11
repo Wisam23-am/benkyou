@@ -1,0 +1,88 @@
+﻿kanji,kana,romaji,meaning,part_of_speech,example_sentence
+私,わたし,watashi,Saya,Kata ganti,私は学生です。
+彼,かれ,kare,Dia (laki-laki) / Pacar,Kata ganti,彼は先生です。
+彼女,かのじょ,kanojo,Dia (perempuan) / Pacar,Kata ganti,彼女は優しいです。
+先生,せんせい,sensei,Guru / Dokter,Kata benda,田中先生は日本語を教えます。
+学生,がくせい,gakusei,Pelajar / Mahasiswa,Kata benda,学生がたくさんいます。
+友達,ともだち,tomodachi,Teman,Kata benda,友達と映画を見ます。
+人,ひと,hito,Orang,Kata benda,あの人は誰ですか。
+名前,なまえ,namae,Nama,Kata benda,お名前は何ですか。
+国,くに,kuni,Negara,Kata benda,あなたの国はどこですか。
+日本,にほん,nihon,Jepang,Kata benda,日本に行きたいです。
+日本語,にほんご,nihongo,Bahasa Jepang,Kata benda,日本語を勉強しています。
+英語,えいご,eigo,Bahasa Inggris,Kata benda,英語が話せますか。
+本,ほん,hon,Buku,Kata benda,本を読みます。
+辞書,じしょ,jisho,Kamus,Kata benda,辞書を引きます。
+水,みず,mizu,Air,Kata benda,お水をください。
+お茶,おちゃ,ocha,Teh hijau,Kata benda,お茶を飲みます。
+ご飯,ごはん,gohan,Nasi / Makanan,Kata benda,朝ご飯を食べました。
+パン,パン,pan,Roti,Kata benda,パンを買いました。
+肉,にく,niku,Daging,Kata benda,肉が好きです。
+魚,さかな,sakana,Ikan,Kata benda,新鮮な魚です。
+野菜,やさい,yasai,Sayuran,Kata benda,野菜を食べましょう。
+りんご,りんご,ringo,Apel,Kata benda,りんごを一つ買いました。
+家,いえ,ie,Rumah,Kata benda,家に帰ります。
+部屋,へや,heya,Kamar / Ruangan,Kata benda,部屋を掃除します。
+学校,がっこう,gakkou,Sekolah,Kata benda,学校へ行きます。
+大学,だいがく,daigaku,Universitas,Kata benda,大学で学びます。
+会社,かいしゃ,kaisha,Perusahaan / Kantor,Kata benda,会社で働きます。
+駅,えき,eki,Stasiun,Kata benda,駅で待ちます。
+電車,でんしゃ,densha,Kereta listrik,Kata benda,電車に乗ります。
+車,くるま,kuruma,Mobil,Kata benda,車を運転します。
+バス,バス,basu,Bus,Kata benda,バスで行きます。
+飛行機,ひこうき,hikouki,Pesawat,Kata benda,飛行機は速いです。
+道,みち,michi,Jalan,Kata benda,この道をまっすぐ行きます。
+店,みせ,mise,Toko,Kata benda,新しい店ができました。
+病院,びょういん,byouin,Rumah sakit,Kata benda,病院に行きます。
+銀行,ぎんこう,ginkou,Bank,Kata benda,銀行でお金を下ろします。
+今日,きょう,kyou,Hari ini,Kata keterangan,今日はいい天気です。
+明日,あした,ashita,Besok,Kata keterangan,明日会いましょう。
+昨日,きのう,kinou,Kemarin,Kata keterangan,昨日は休みでした。
+今,いま,ima,Sekarang,Kata keterangan,今は何時ですか。
+時間,じかん,jikan,Waktu / Jam,Kata benda,時間がありません。
+朝,あさ,asa,Pagi,Kata benda,朝早く起きます。
+昼,ひる,hiru,Siang,Kata benda,お昼ご飯を食べます。
+夜,よる,yoru,Malam,Kata benda,夜勉強します。
+毎日,まいにち,mainichi,Setiap hari,Kata keterangan,毎日日本語を勉強します。
+毎週,まいしゅう,maishuu,Setiap minggu,Kata keterangan,毎週日曜日は休みです。
+毎月,まいつき,maitsuki,Setiap bulan,Kata keterangan,毎月本を買います。
+毎年,まいとし,maitoshi,Setiap tahun,Kata keterangan,毎年旅行します。
+月曜日,げつようび,getsuyoubi,Senin,Kata benda,月曜日は忙しいです。
+火曜日,かようび,kayoubi,Selasa,Kata benda,火曜日にテストがあります。
+水曜日,すいようび,suiyoubi,Rabu,Kata benda,水曜日に買い物します。
+木曜日,もくようび,mokuyoubi,Kamis,Kata benda,木曜日は雨でした。
+金曜日,きんようび,kin'youbi,Jumat,Kata benda,金曜日の夜は映画を見ます。
+土曜日,どようび,doyoubi,Sabtu,Kata benda,土曜日は遊びます。
+日曜日,にちようび,nichiyoubi,Minggu,Kata benda,日曜日は休みです。
+食べる,たべる,taberu,Makan,Kata kerja,ご飯を食べます。
+飲む,のむ,nomu,Minum,Kata kerja,お茶を飲みます。
+見る,みる,miru,Melihat / Menonton,Kata kerja,テレビを見ます。
+聞く,きく,kiku,Mendengar / Bertanya,Kata kerja,音楽を聞きます。
+読む,よむ,yomu,Membaca,Kata kerja,新聞を読みます。
+書く,かく,kaku,Menulis,Kata kerja,手紙を書きます。
+話す,はなす,hanasu,Berbicara,Kata kerja,友達と話します。
+買う,かう,kau,Membeli,Kata kerja,パンを買います。
+行く,いく,iku,Pergi,Kata kerja,東京へ行きます。
+来る,くる,kuru,Datang,Kata kerja,友達が家に来ます。
+帰る,かえる,kaeru,Pulang,Kata kerja,うちに帰ります。
+起きる,おきる,okiru,Bangun tidur,Kata kerja,6時に起きます。
+寝る,ねる,neru,Tidur,Kata kerja,11時に寝ます。
+会う,あう,au,Bertemu,Kata kerja,駅で会います。
+大きい,おおきい,ookii,Besar,Kata sifat-i,大きい犬です。
+小さい,ちいさい,chiisai,Kecil,Kata sifat-i,小さい猫です。
+新しい,あたらしい,atarashii,Baru,Kata sifat-i,新しい本です。
+古い,ふるい,furui,Lama / Tua,Kata sifat-i,古い車です。
+いい,いい,ii,Bagus / Baik,Kata sifat-i,天気がいいです。
+悪い,わるい,warui,Buruk / Jelek,Kata sifat-i,気分が悪いです。
+暑い,あつい,atsui,Panas (cuaca),Kata sifat-i,今日はとても暑いです。
+寒い,さむい,samui,Dingin (cuaca),Kata sifat-i,冬は寒いです。
+高い,たかい,takai,Tinggi / Mahal,Kata sifat-i,このかばんは高いです。
+安い,やすい,yasui,Murah,Kata sifat-i,りんごは安いです。
+面白い,おもしろい,omoshiroi,Menarik / Lucu,Kata sifat-i,この本は面白いです。
+静か,しずか,shizuka,Tenang / Sunyi,Kata sifat-na,静かな部屋です。
+賑やか,にぎやか,nigiyaka,Ramai,Kata sifat-na,駅の前は賑やかです。
+元気,げんき,genki,Sehat / Bersemangat,Kata sifat-na,お元気ですか。
+親切,しんせつ,shinsetsu,Ramah / Baik hati,Kata sifat-na,親切な人です。
+好き,すき,suki,Suka,Kata sifat-na,日本料理が好きです。
+上手,じょうず,jouzu,Pandai / Mahir,Kata sifat-na,歌が上手ですね。
+下手,へた,heta,Kurang pandai,Kata sifat-na,料理が下手です。
