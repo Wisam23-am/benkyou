@@ -2,6 +2,7 @@
 # BENKYOU SHIMASHOU - .gitignore
 # =========================================================================
 
+*.vscode-skills/
 # Dependencies
 /node_modules
 /.pnp
