@@ -1,7 +1,8 @@
-﻿"use client";
+'use client';
 
 import { useState } from 'react';
-import { PenLine, Check } from 'lucide-react';
+import Link from 'next/link';
+import { PenLine, Check, ArrowRight } from 'lucide-react';
 import { addToReview } from '@/app/actions/review';
 
 interface Props {
@@ -22,9 +23,10 @@ export function AddToReviewButton({ itemId, itemType }: Props) {
       if (res.success) {
         setSuccess(true);
       } else {
-        setError(res.message || res.error || 'Terjadi kesalahan');
         if (res.message === 'Sudah ada di antrean review Anda.') {
-          setSuccess(true); // Biarkan centang jika sudah ada
+          setSuccess(true);
+        } else {
+          setError(res.message || res.error || 'Terjadi kesalahan');
         }
       }
     } catch (e) {
@@ -36,22 +38,30 @@ export function AddToReviewButton({ itemId, itemType }: Props) {
 
   if (success) {
     return (
-      <span className="flex items-center gap-1 font-semibold text-matcha">
-        <Check size={16} /> Sedang dipelajari
-      </span>
+      <div className="flex flex-col items-end gap-1">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-matcha/10 px-3 py-1 text-xs font-bold text-matcha">
+          <Check size={14} /> Masuk Jadwal SRS
+        </span>
+        <Link
+          href="/dashboard/review"
+          className="inline-flex items-center gap-1 text-[11px] font-bold text-ai hover:underline"
+        >
+          Lihat di Ulangan (SRS) <ArrowRight size={12} />
+        </Link>
+      </div>
     );
   }
 
   return (
     <div className="flex flex-col items-end">
-      <button 
+      <button
         onClick={handleAdd}
         disabled={loading}
-        className="flex items-center gap-1 font-semibold text-ai hover:underline disabled:opacity-50"
+        className="inline-flex items-center gap-1.5 rounded-xl bg-ai-soft px-3 py-1.5 text-xs font-bold text-ai transition hover:bg-ai hover:text-white disabled:opacity-50 shadow-2xs"
       >
         <PenLine size={14} /> {loading ? 'Menambahkan...' : 'Latih Kanji Ini'}
       </button>
-      {error && <span className="text-xs text-warning-foreground mt-1">{error}</span>}
+      {error && <span className="text-xs text-red-500 mt-1 font-medium">{error}</span>}
     </div>
   );
 }

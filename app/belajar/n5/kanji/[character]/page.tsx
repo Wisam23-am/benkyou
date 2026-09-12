@@ -1,6 +1,6 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ArrowLeft, BookOpen } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { AddToReviewButton } from '@/components/add-to-review-button';
 import { createAdminClient } from '@/lib/supabase/admin';
 
@@ -11,7 +11,7 @@ export default async function KanjiDetailPage({
 }) {
   const { character } = await params;
   const decodedChar = decodeURIComponent(character);
-  
+
   const supabase = createAdminClient();
   const { data: kanji } = await supabase
     .from('kanji_items')
@@ -23,8 +23,6 @@ export default async function KanjiDetailPage({
     notFound();
   }
 
-  // Pisahkan onyomi dan kunyomi secara sederhana (Katakana = Onyomi, Hiragana = Kunyomi)
-  // Ini asumsi data di array readings. Idealnya data dipisah sejak awal.
   const isKatakana = (str: string) => /^[\u30A0-\u30FF]+$/.test(str.replace(/[-]/g, ''));
   const onyomi = kanji.readings.filter((r: string) => isKatakana(r));
   const kunyomi = kanji.readings.filter((r: string) => !isKatakana(r));
@@ -42,7 +40,7 @@ export default async function KanjiDetailPage({
           </Link>
         </div>
       </header>
-      
+
       <main className="mx-auto max-w-[800px] px-4 py-8 sm:px-6 sm:py-12">
         <div className="flex flex-col md:flex-row gap-10">
           {/* Card Kiri - Karakter Utama */}
@@ -67,24 +65,46 @@ export default async function KanjiDetailPage({
               <div className="space-y-3 rounded-xl border border-neutral-200 bg-neutral-50/50 p-5">
                 <p className="text-sm font-semibold uppercase tracking-wider text-sumi-muted/70">Kunyomi (Jepang)</p>
                 <div className="flex flex-wrap gap-2">
-                  {kunyomi.length > 0 ? kunyomi.map((reading: string) => (
-                    <span key={reading} className="font-jp text-lg font-medium text-sumi bg-white px-3 py-1 rounded-md border border-neutral-200 shadow-sm">
-                      {reading}
-                    </span>
-                  )) : <span className="text-sm text-neutral-400 italic">Tidak ada</span>}
+                  {kunyomi.length > 0 ? (
+                    kunyomi.map((reading: string) => (
+                      <span
+                        key={reading}
+                        className="font-jp text-lg font-medium text-sumi bg-white px-3 py-1 rounded-md border border-neutral-200 shadow-sm"
+                      >
+                        {reading}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-sm text-neutral-400 italic">Tidak ada</span>
+                  )}
                 </div>
               </div>
 
               <div className="space-y-3 rounded-xl border border-neutral-200 bg-neutral-50/50 p-5">
                 <p className="text-sm font-semibold uppercase tracking-wider text-sumi-muted/70">Onyomi (China)</p>
                 <div className="flex flex-wrap gap-2">
-                  {onyomi.length > 0 ? onyomi.map((reading: string) => (
-                    <span key={reading} className="font-jp text-lg font-medium text-sumi bg-white px-3 py-1 rounded-md border border-neutral-200 shadow-sm">
-                      {reading}
-                    </span>
-                  )) : <span className="text-sm text-neutral-400 italic">Tidak ada</span>}
+                  {onyomi.length > 0 ? (
+                    onyomi.map((reading: string) => (
+                      <span
+                        key={reading}
+                        className="font-jp text-lg font-medium text-sumi bg-white px-3 py-1 rounded-md border border-neutral-200 shadow-sm"
+                      >
+                        {reading}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-sm text-neutral-400 italic">Tidak ada</span>
+                  )}
                 </div>
               </div>
+            </div>
+
+            {/* Penjelasan Fitur Latih Kanji (SRS) */}
+            <div className="rounded-2xl border border-ai/20 bg-ai-soft/50 p-4 text-xs leading-relaxed text-sumi-muted space-y-1">
+              <p className="font-bold text-ai text-xs">💡 Kegunaan Tombol &quot;Latih Kanji Ini&quot;:</p>
+              <p>
+                Tombol ini memasukkan kanji <strong>{kanji.character}</strong> ke dalam jadwal <strong>Spaced Repetition System (SRS)</strong> Anda. Kanji ini akan otomatis muncul sebagai flashcard di menu <strong className="text-sumi">Ulangan (SRS)</strong> pada waktu-waktu yang tepat agar Anda tidak lupa.
+              </p>
             </div>
           </div>
         </div>
@@ -92,4 +112,3 @@ export default async function KanjiDetailPage({
     </div>
   );
 }
-

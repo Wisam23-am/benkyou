@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { BookOpen, ClipboardCheck, Target, ArrowRight, Library, RotateCcw, Sparkles } from 'lucide-react';
 import { createClient } from '@/lib/supabase/server';
 import { createAdminClient } from '@/lib/supabase/admin';
@@ -103,6 +103,58 @@ export default async function DashboardPage() {
         </Link>
       </div>
 
+      {/* Pondasi Dasar Section: Kana & Counters */}
+      <section className="space-y-4 pt-2">
+        <h2 className="text-xl font-bold text-sumi">Pondasi & Tata Hitung</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          {/* Hiragana & Katakana */}
+          <Link
+            href="/belajar/n5/kana"
+            className="group flex flex-col justify-between rounded-3xl border border-neutral-300 bg-white p-6 sm:p-7 shadow-xs transition-all hover:border-ai hover:shadow-md hover:-translate-y-1"
+          >
+            <div className="flex items-start justify-between">
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-ai">Alfabet Fonetik</span>
+                <h3 className="text-xl font-bold text-sumi">Hiragana & Katakana</h3>
+                <p className="text-sm text-sumi-muted max-w-sm">
+                  Tabel 46 huruf dasar, bunyi turunan (゛゜), dan bunyi gabungan lengkap dengan audio.
+                </p>
+              </div>
+              <span className="font-jp text-4xl font-bold text-ai/25 group-hover:text-ai transition-colors">
+                あア
+              </span>
+            </div>
+            <div className="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4 text-xs font-bold text-ai">
+              <span>Buka Tabel Kana</span>
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </div>
+          </Link>
+
+          {/* Angka & Satuan Hitung */}
+          <Link
+            href="/belajar/n5/angka-counters"
+            className="group flex flex-col justify-between rounded-3xl border border-neutral-300 bg-white p-6 sm:p-7 shadow-xs transition-all hover:border-yuzu hover:shadow-md hover:-translate-y-1"
+          >
+            <div className="flex items-start justify-between">
+              <div className="space-y-1">
+                <span className="text-xs font-bold uppercase tracking-wider text-yuzu-foreground">Satuan Hitung & Kalender</span>
+                <h3 className="text-xl font-bold text-sumi">Angka, Tanggal & Counters</h3>
+                <p className="text-sm text-sumi-muted max-w-sm">
+                  Pelajari cara menghitung jumlah barang (~つ), orang, lantai (~階), kali (~回), uang Yen, dan tanggal.
+                </p>
+              </div>
+              <span className="font-jp text-4xl font-bold text-yuzu/40 group-hover:text-yuzu transition-colors">
+                階回
+              </span>
+            </div>
+            <div className="mt-6 flex items-center justify-between border-t border-neutral-100 pt-4 text-xs font-bold text-yuzu-foreground">
+              <span>Pelajari Satuan Hitung</span>
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Main CTA: JLPT Simulation */}
       <section className="pt-6">
         <h2 className="mb-4 text-2xl font-bold tracking-tight text-sumi">Tujuan Akhir</h2>
@@ -125,6 +177,28 @@ export default async function DashboardPage() {
             </div>
           </div>
         </Link>
+      </section>
+
+      {/* Community Feedback Card */}
+      <section className="pt-2">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 rounded-3xl border border-ai/20 bg-gradient-to-r from-ai-soft/60 via-white to-blue-50/40 p-6 sm:p-8 shadow-xs">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-ai">
+              <Sparkles size={14} />
+              <span>Suara Pembelajar</span>
+            </div>
+            <h3 className="text-xl font-bold text-sumi">Punya Ide Fitur atau Menemukan Bug?</h3>
+            <p className="text-sm text-sumi-muted max-w-xl">
+              Kami terus mengembangkan Benkyou Shimashou. Berikan masukan atau laporkan kendala langsung ke developer.
+            </p>
+          </div>
+          <Link
+            href="/dashboard/feedback"
+            className="inline-flex shrink-0 items-center gap-2 rounded-2xl bg-ai px-6 py-3 text-sm font-bold text-white shadow-md shadow-ai/20 transition hover:bg-ai/90 hover:scale-[1.02] active:scale-[0.98]"
+          >
+            Beri Masukan Sekarang <ArrowRight size={16} />
+          </Link>
+        </div>
       </section>
     </div>
   );
